@@ -10,6 +10,7 @@ html{
     width: 100%;
     height: 100%;
     align-items: center;
+    outline-color;:black
 }
 
 #topbanner .container .logo{
@@ -36,16 +37,26 @@ html{
 
 #topbanner .optionsbar{
     display: flex;
+    position:sticky;
     flex-direction: row;
-    background-color: white;
-    justify-content: space-evenly;
-    margin: 3px;
-    padding: 13px;
-    outline-color: grey;
+    background-color: rgb(0, 0, 0);
+    justify-content: space-between;
+    padding: 7px;
     outline-width: 5px;
 
 }
 
 #topbanner .optionsbar >div{
-    outline-color: black;
+    position: sticky;
+    background-color: white;
+    padding: 13px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    padding: 5px;
+    top:20;
+
 }
