@@ -3,6 +3,10 @@ html{
 
 }
 
+#topbanner{
+    height:150px;
+}
+
 #topbanner .container{
     display: flex;
     flex-direction: row;
@@ -10,7 +14,7 @@ html{
     width: 100%;
     height: 100%;
     align-items: center;
-    outline-color;:black
+    outline-color:black;
 }
 
 #topbanner .container .logo{
@@ -28,7 +32,6 @@ html{
     flex-grow: 1;
     margin: 1px;
     text-align: center;
-    text-justify: center;
     font-size: 30px;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -37,7 +40,7 @@ html{
 
 #topbanner .optionsbar{
     display: flex;
-    position:sticky;
+    position: sticky;
     flex-direction: row;
     background-color: rgb(0, 0, 0);
     justify-content: space-between;
@@ -47,7 +50,6 @@ html{
 }
 
 #topbanner .optionsbar >div{
-    position: sticky;
     background-color: white;
     padding: 13px;
 }
