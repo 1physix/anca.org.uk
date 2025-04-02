@@ -10,6 +10,8 @@ html{
 #topbanner .container{
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    max-height: 10px
     background-color: rgb(186, 186, 186);
     width: 100%;
     height: 100%;
@@ -18,6 +20,8 @@ html{
 }
 
 #topbanner .container .logo{
+    flex-basis: 200px;
+    max-width: 125px;
     background-color: white;
     margin: 4px;
     padding-left: 25px;
@@ -27,8 +31,6 @@ html{
 }
 
 #topbanner .container .main{
-    background-color: white;
-    color:black;
     flex-grow: 1;
     margin: 1px;
     text-align: center;
@@ -36,6 +38,8 @@ html{
     padding-top: 25px;
     padding-bottom: 25px;
     margin-right: 4px;
+    background-color: white;
+    color:black;
 }
 
 #topbanner .optionsbar{
