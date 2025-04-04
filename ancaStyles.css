@@ -1,15 +1,40 @@
+/*Order of elements for CSS Files:
+1. FlexBox rules
+2. FlexBox sizing
+3. Margins, Paddings, general sizing
+4. FlexBox Styling
+*/
+
 html, body{
+    min-width: 320px;
+    max-width: 1400px;
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0 auto;
     background-color: rgb(213, 213, 213);
-    height: 100%;
-    margin: 0;
-    padding: 0;
+
 
 }
 
 
-body{
-    max-height: 100vh;
-    max-width: 100vw;
+#information {
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+
+
+.windowscale {
+    width: 1420px;
+    margin: 0 auto;
+    transform-origin: top left;
+}
+
+@media (max-width:1920px) {
+    .windowscale {
+        transform: scale(calc(100vw/1920));
+    }
 }
 
 
@@ -63,8 +88,8 @@ body{
     display: flex;
     position: sticky;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-content: stretch;
+    justify-content: center;
+    align-content: center;
     background-color: rgb(186,186,186);
     padding: 7px;
     outline-width: 5px;
@@ -72,18 +97,17 @@ body{
 }
 
 /*General Rules for all flexboxes within the navigation header*/
-#topbanner .optionsbar >div{
+#topbanner .optionsbar > div{
     flex-shrink: 1;
     flex-grow: 1;
     flex-basis: auto;
     text-align: center;
-    background-color: white;
-    outline: 2px solid black;
     line-height: 40px;
     width:5px;
     height: 40px;
     border-radius: 50px;
-
+    background-color: white;
+    outline: 2px solid black;
 }
 
 #topbanner .optionsbar .two{
