@@ -7,11 +7,11 @@
 
 html, body{
     min-width: 320px;
-    max-width: 1400px;
+    width: 100vw;
     height: 100vh;
     overflow-x: hidden;
     margin: 0 auto;
-    background-color: rgb(213, 213, 213);
+    background-color: rgb(232, 232, 232);
 
 
 }
@@ -26,7 +26,7 @@ html, body{
 
 
 .windowscale {
-    width: 1420px;
+    width: 100%;
     margin: 0 auto;
     transform-origin: top left;
 }
@@ -40,7 +40,8 @@ html, body{
 
 /*The header id, just to hold items, not a flexbox*/
 #topbanner{
-    min-height: 150px;
+    width: 100%;
+    max-width: 100%;
 }
 
 /*Flex-Box within the header id*/
@@ -62,23 +63,23 @@ html, body{
 #topbanner .container .logo{
     flex-basis: 200px;
     max-width: 125px;
-    background-color: white;
     margin: 4px;
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 4px;
     padding-bottom: 4px;
+    background-color: white;
 }
 
 /*Flex-Box within the main Flex-Box that holds the ANCA Title*/
 #topbanner .container .main{
     flex-grow: 1;
-    margin: 1px;
     text-align: center;
-    font-size: 30px;
+    text-wrap: nowrap;
+    font-size: 125%;
     padding-top: 25px;
     padding-bottom: 25px;
-    margin-right: 4px;
+    margin: 4px;
     background-color: white;
     color:black;
 }
@@ -88,11 +89,12 @@ html, body{
     display: flex;
     position: sticky;
     flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    background-color: rgb(186,186,186);
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
     padding: 7px;
     outline-width: 5px;
+    background-color: rgb(186,186,186);
 
 }
 
@@ -103,7 +105,7 @@ html, body{
     flex-basis: auto;
     text-align: center;
     line-height: 40px;
-    width:5px;
+    min-width: 90px;
     height: 40px;
     border-radius: 50px;
     background-color: white;
@@ -117,8 +119,8 @@ html, body{
 footer {
     display: flex;
     justify-content: center;
+    position;
+    padding: 75px;
     background-color: grey;
-    padding: 5px;
-    top:20;
 
 }
