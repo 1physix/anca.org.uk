@@ -112,14 +112,17 @@ html, body{
     outline: 2px solid black;
 }
 
-#topbanner .optionsbar .two{
-    line-height: 20px;
-}
 
 footer {
     display: flex;
-    justify-content: center;
-    padding: 75px;
+    height: 150px;
     background-color: grey;
 
+}
+
+#address {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    margin: 10px;
 }
