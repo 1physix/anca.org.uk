@@ -119,7 +119,6 @@ html, body{
 footer {
     display: flex;
     justify-content: center;
-    position;
     padding: 75px;
     background-color: grey;
 
