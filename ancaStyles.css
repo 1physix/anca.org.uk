@@ -99,7 +99,7 @@ html, body{
 }
 
 /*General Rules for all flexboxes within the navigation header*/
-#topbanner .optionsbar > div{
+#topbanner .optionsbar  .nav-item{
     flex-shrink: 1;
     flex-grow: 1;
     flex-basis: auto;
@@ -113,6 +113,9 @@ html, body{
     outline: 2px solid black;
 }
 
+nav li{
+    list-style-type: none;
+}
 
 footer {
     display: flex;
