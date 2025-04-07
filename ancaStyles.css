@@ -18,8 +18,8 @@ html, body{
 
 
 #information {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 10vw;
+    margin-right: 10vw;
 
 }
 
@@ -28,12 +28,12 @@ html, body{
 .windowscale {
     width: 100%;
     margin: 0 auto;
-    transform-origin: top left;
 }
 
 @media (max-width:1920px) {
     .windowscale {
         transform: scale(calc(100vw/1920));
+        transform-origin: top;
     }
 }
 
@@ -79,27 +79,70 @@ html, body{
     font-size: 3vw;
     padding-top: 25px;
     padding-bottom: 25px;
-    margin: 4px;
+    margin: 3px;
     background-color: white;
     color:black;
 }
 
 /*Another Flex-Box within the topheader id that holds all the navigation stuff*/
-#topbanner .optionsbar {
+#topbanner #navcontainer .navbar {
     display: flex;
     position: sticky;
-    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     box-sizing: border-box;
-    padding: 7px;
-    outline-width: 5px;
-    background-color: rgb(186,186,186);
+    height: 7vh;
+    padding: 1px;
+    margin: 4px;
+    margin-top: 1px;
+    outline: 5px solid rgb(186,186,186) ;
+    background-color: rgb(255, 255, 255);
+
 
 }
 
 /*General Rules for all flexboxes within the navigation header*/
-#topbanner .optionsbar  .nav-item{
+#topbanner #navcontainer .navbar ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 6vw;
+    font-size: 18px;
+    
+}
+
+.navbar ul li {
+    flex-wrap: nowrap;
+}
+
+
+.navbar ul li a{
+    position: relative;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar ul li a::before {
+    content: "";
+    position: absolute;
+    text-decoration: none;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 14%;
+    transition: 0.3s;
+    background: rgb(181, 243, 255);
+}  
+
+.navbar ul li a:hover::before {
+    width: 100%;
+
+}  
+
+
+
+
+    /*
     flex-shrink: 1;
     flex-grow: 1;
     flex-basis: auto;
@@ -111,11 +154,9 @@ html, body{
     margin: 2px;
     background-color: white;
     outline: 2px solid black;
-}
+    */
 
-nav li{
-    list-style-type: none;
-}
+
 
 footer {
     display: flex;
@@ -134,7 +175,7 @@ footer {
     text-align: left;
     margin: 10px;
     padding: 4px;
-    outline: 2px solid black;
+    outline: 2px solid rgb(0, 0, 0);
 }
 
 #footeraddress h3, #footeraddress p {
