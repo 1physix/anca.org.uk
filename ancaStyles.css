@@ -51,38 +51,34 @@ h1{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-content: stretch;
+    align-items: center;
     width: 100%;
-    height: 15vh;
-    max-width: 100vw;
-    max-height: 16vh;
-    background-color: rgb(186,186,186);
+    height: auto;
+    min-height: 80px;
+    padding: 10px 0;
+    background-color: rgb(255, 255, 255);
     outline-color:black;
 }
 
 /*Flex-Box within the main Flex-Box that holds the ANCA logo*/
 #topbanner .container .logo{
-    flex-basis: 200px;
-    max-width: 120px;
-    margin: 4px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    flex: 0 0 auto; /* Don't grow or shrink */
+    width: 80px; /* Fixed width */
+    height: 80px; /* Fixed height matching width */
+    max-width: 120px; /* Maximum size */
+    margin: 0 10px;
+    padding: 5px;
     background-color: white;
+    object-fit: contain;
 }
 
 /*Flex-Box within the main Flex-Box that holds the ANCA Title*/
 #topbanner .container .main{
     flex-grow: 1;
     text-align: center;
-    text-wrap: nowrap;
-    font-size: 3vw;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    margin: 3px;
+    padding: 10px;
+    margin: 0 10px;
     background-color: white;
-    color:black;
 }
 
 /*Another Flex-Box within the topheader id that holds all the navigation stuff*/
@@ -160,18 +156,21 @@ h1{
 
     .navbar {
         display: none;
+        max-height: 0;
+        visibility: hidden;
     }
 
     .navbar.show {
-        display: none;
+        display: flex;
         flex-direction: column;
         position: absolute;
         z-index: 1;
+        visibility: visible;
         top: 100%;
         right: 0;
         min-width: 30vw;
         min-height: 44vh;
-        background-color: white;
+        background-color: rgb(0, 0, 0);
     }
 
     .navbar.show ul {
@@ -204,6 +203,7 @@ footer {
 
 #footeraddress h3, #footeraddress p {
     margin: 0px;
+    margin-bottom: 20px;
 }
 
 #footeraddress p{
