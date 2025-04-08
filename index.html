@@ -6,23 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href = "ancaStyles.css" rel = "stylesheet">
     <title>Addiscombe Neighbourhood Care Association Homepage</title>
-    <link href = "Images/ANCA icon.jpg" rel = "icon" type = "image/x-icon">
+    <link rel = "icon" type = "image/x-icon" href = "Images/ANCA icon.jpg">
 
 
 </head>
 
 
-
 <body>
+
     <div class = "windowscale">
+        <!--Top banner w/ image and title-->
         <div id = "topbanner">
             <div class = "container">
                 <div class = "logo"> <img src = "Images/ANCA icon.jpg" height="100%" width="100%"> </div>
-                <div class = "main"> <label>Neighbourhood Care Association</label></div>
+                <div class = "main"> <h1>Addiscombe Neighbourhood Care Association</h1></div>
             </div>
 
-            <div id= "navcontainer">
-                <nav class = "navbar">
+            
+
+
+        <!--Navigation Menu-->
+            <div id= "navcontainer" class = "navcontainer">
+                <div class = "hamburger" onclick = "toggleMenu()">☰</div>
+                <nav class = "navbar" id = "navbar">
                     <ul>
                         <li class = "nav-item"><a href = "#">Home</a></li>
                         <li class = "nav-item"><a href = "#">Events and Activities</a></li>
@@ -59,6 +65,17 @@
 
         </footer>
     </div>
+
+
+    <!--JS SCRIPTS-->
+    <script>
+        function toggleMenu() {
+            console.log('Hamburger menu clicked');
+            const navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("show");
+        }
+    </script>
+<!--END OF JS SCRIPTS-->
 </body>
 </html>
 

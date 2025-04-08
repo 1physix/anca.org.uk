@@ -16,14 +16,16 @@ html, body{
 
 }
 
+h1{
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 1.1em;
+}
 
 #information {
     margin-left: 10vw;
     margin-right: 10vw;
 
 }
-
-
 
 .windowscale {
     width: 100%;
@@ -48,13 +50,12 @@ html, body{
 #topbanner .container{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-evenly;
     align-content: stretch;
     width: 100%;
-    height: 100%;
-    max-height: 100vh;
+    height: 15vh;
     max-width: 100vw;
+    max-height: 16vh;
     background-color: rgb(186,186,186);
     outline-color:black;
 }
@@ -62,7 +63,7 @@ html, body{
 /*Flex-Box within the main Flex-Box that holds the ANCA logo*/
 #topbanner .container .logo{
     flex-basis: 200px;
-    max-width: 125px;
+    max-width: 120px;
     margin: 4px;
     padding-left: 25px;
     padding-right: 25px;
@@ -107,6 +108,8 @@ html, body{
     align-items: center;
     list-style-type: none;
     gap: 6vw;
+    margin: 0;
+    padding: 0;
     font-size: 18px;
     
 }
@@ -129,7 +132,7 @@ html, body{
     top: 100%;
     left: 0;
     width: 0;
-    height: 14%;
+    height: 0.6vw;
     transition: 0.3s;
     background: rgb(181, 243, 255);
 }  
@@ -139,24 +142,45 @@ html, body{
 
 }  
 
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
 
+@media (max-width: 785px) {
+    .navcontainer .hamburger {
+    
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 13px;
+        
+    }
 
+    .navbar {
+        display: none;
+    }
 
-    /*
-    flex-shrink: 1;
-    flex-grow: 1;
-    flex-basis: auto;
-    text-align: center;
-    line-height: 40px;
-    min-width: 90px;
-    height: 40px;
-    border-radius: 50px;
-    margin: 2px;
-    background-color: white;
-    outline: 2px solid black;
-    */
+    .navbar.show {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        right: 0;
+        min-width: 30vw;
+        min-height: 44vh;
+        background-color: white;
+    }
 
-
+    .navbar.show ul {
+        flex-direction: column;
+        gap: 1px;
+        padding: 1px;
+    }
+}
+/*End of Top Header stuff*/
 
 footer {
     display: flex;
