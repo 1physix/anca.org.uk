@@ -18,7 +18,7 @@ html, body{
 
 h1{
     font-family:Arial, Helvetica, sans-serif ;
-    font-size: 1.1em;
+    font-size: 3.3vw;
 }
 
 #information {
@@ -66,7 +66,7 @@ h1{
     width: 80px; /* Fixed width */
     height: 80px; /* Fixed height matching width */
     max-width: 120px; /* Maximum size */
-    margin: 0 10px;
+    margin: 0 20px;
     padding: 5px;
     background-color: white;
     object-fit: contain;
@@ -88,7 +88,7 @@ h1{
     justify-content: space-evenly;
     align-items: center;
     box-sizing: border-box;
-    height: 7vh;
+    height: 8vh;
     padding: 1px;
     margin: 4px;
     margin-top: 1px;
@@ -170,7 +170,6 @@ h1{
         right: 0;
         min-width: 30vw;
         min-height: 44vh;
-        background-color: rgb(0, 0, 0);
     }
 
     .navbar.show ul {
@@ -187,6 +186,7 @@ footer {
     justify-content: space-between;
     align-items: flex-end;
     position: relative;
+    margin-bottom: 100px;
     background-color: grey;
 
 }
@@ -198,7 +198,7 @@ footer {
     text-align: left;
     margin: 10px;
     padding: 4px;
-    outline: 2px solid rgb(0, 0, 0);
+
 }
 
 #footeraddress h3, #footeraddress p {
@@ -221,5 +221,17 @@ footer #watermark {
 
 footer #watermark h6{
     margin: 1px;
-    outline: 2px solid black;
+}
+
+footer #contact{
+    display: flex;
+}
+
+footer #contact ul{
+    flex-direction: column;
+    align-items:flex-start;
+    text-align: left;
+    list-style-type: none;
+    margin: 10px;
+    padding: 4px;
 }
